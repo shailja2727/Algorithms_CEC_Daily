@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 void heapify(int *arr,int n,int i){
-    int left=2*i+1;
-    int right=2*i+2;
+    int left=2*i+1;//left child
+    int right=2*i+2;//right child
     int maxii=i;
     if(left<n && arr[left]>arr[maxii]){
         maxii=left;
@@ -12,7 +12,7 @@ void heapify(int *arr,int n,int i){
     }
     if(maxii!=i){
         swap(arr[maxii],arr[i]);
-        heapify(arr,n,maxii);
+        heapify(arr,n,maxii);//called for tree below it
     }
 }
 void buildheap(int *arr,int n){

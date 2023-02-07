@@ -15,17 +15,19 @@ struct node{
 };
 int main()
 {
+    cout<<"Enter the number of vertices and edges:"<<endl;
     int n,m;
     cin>>n>>m;
     vector<node>adj;
     vector<int>dist(n,1e9);
-   
+    cout<<"Enter the source,destination and weight for edge formation:"<<endl;
     for(int i = 0;i<m;i++)
     {
         int u,v,wt;
         cin>>u>>v>>wt;
         adj.push_back(node(u,v,wt));
     }
+    cout<<"Enter the source:"<<endl;
     int src;
     cin>>src;
     dist[src] = 0;
